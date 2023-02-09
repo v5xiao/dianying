@@ -95,7 +95,7 @@ export default {
     mounted(){
         //console.log( this.movieId );
         this.axios.get('/api/detailmovie?movieId='+ this.movieId).then((res)=>{
-            var msg = res.data.msg;
+            var msg = res.data.msgs;
             if( msg === 'ok' ){
                 this.isLoading = false;
                 this.detailMovie = res.data.data.detailMovie;
