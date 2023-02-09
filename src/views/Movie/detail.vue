@@ -100,6 +100,8 @@ export default {
                 this.isLoading = false;
                 this.detailMovie = res.data.data.detailMovie;
                 this.$nextTick(()=>{
+
+					//ksdjhkhjkdhskhakj
                     new Swiper(this.$refs.detail_player , {
                         slidesPerView : 'auto',
                         freeMode : true,
