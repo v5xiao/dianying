@@ -1,7 +1,7 @@
 <template>
     <div id="detailContrainer" class="slide-enter-active">
         <Header title="影片详情">
-            <i class="iconfont icon-right" @touchstart="handleToBack">dsjkdksdsdsdjahjks</i>
+            <i class="iconfont icon-right" @touchstart="handleToBack"></i>
         </Header>
         <Loading v-if="isLoading" />
 		<div v-else id="content" class="contentDetail">
@@ -95,6 +95,7 @@ export default {
     mounted(){
         //console.log( this.movieId );
         this.axios.get('/api/detailmovie?movieId='+ this.movieId).then((res)=>{
+            var msg = res.data.msg;
             if( msg === 'ok' ){
                 this.isLoading = false;
                 this.detailMovie = res.data.data.detailMovie;
