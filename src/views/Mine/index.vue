@@ -15,7 +15,7 @@ import Login from '@/components/Login';
 
 export default {
     name : 'Mine',
-    components : {
+    components : { 
         Header,
         TabBar,
         Login
